@@ -7,4 +7,5 @@ def test_duplicate_columns():
 def test_mixed_columns():
     cols = ["id", "name", "id", "name", "name"]
     expected = ["id", "name", "id.1", "name.1", "name.2"]
+    print("Hello CJY")
     assert dedupe_header(cols) == expected
