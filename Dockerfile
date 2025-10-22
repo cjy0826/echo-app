@@ -2,9 +2,9 @@ FROM python:3.13.9-slim
 
 WORKDIR /app
 
-COPY dedupe.py test_dedupe.py ./
+COPY dedupe.py test_dedupe.py requirements.txt ./
 
-RUN pip install --no-cache-dir pytest
+RUN pip install -r requirements.txt
 
 RUN mkdir -p results
 
